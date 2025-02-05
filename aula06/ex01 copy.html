@@ -7,20 +7,19 @@
     <style>
         body {
             background-color: rgb(70, 142, 236);
-            color: white;
+            color: white; /* comentario em css */
             font: normal 25pt arial;  
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Olá, Mundo!</h1>
+        <h1>Olá, Mundo!</h1>  
     </header>
     <p>Já me livrei da maldição</p>
     <script>
-        window.alert('Minha primeira mensagem')
-        window.confirm('Esta gostando de JS?') // Janela com botão ok ou cancela 
-        window.prompt('Qual é o seu nome?')  //Vai perguntar o nome
+        var nome = window.prompt('Qual é o seu nome?')  //Vai perguntar o nome
+        window.alert(' É um grande prazer te conhecer, ' + nome + '!')  //concatenação
     </script>
 </body>
 </html>

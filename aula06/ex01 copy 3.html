@@ -7,20 +7,23 @@
     <style>
         body {
             background-color: rgb(70, 142, 236);
-            color: white;
+            color: white; /* comentario em css */
             font: normal 25pt arial;  
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Olá, Mundo!</h1>
+        <h1>Olá, Mundo!</h1>  
     </header>
     <p>Já me livrei da maldição</p>
     <script>
-        window.alert('Minha primeira mensagem')
-        window.confirm('Esta gostando de JS?') // Janela com botão ok ou cancela 
-        window.prompt('Qual é o seu nome?')  //Vai perguntar o nome
+       var n1 = Number (window.prompt('Digite um número'))
+       var n2 = Number (window.prompt('Digite outro número'))
+       var s = n1 + n2
+       window.alert (`A soma entre ${n1} e ${n2} é igual a ${s}`)
+       //  (number + number) para adição 
+       //  (string + string) para concatenação
     </script>
 </body>
 </html>
