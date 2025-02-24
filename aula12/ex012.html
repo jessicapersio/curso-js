@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação no Brasil</title>
+    <style>
+        body {
+            background-color: rgb(19, 90, 14);
+            color: rgb(212, 242, 12);
+            font: normal 15pt arial;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Coloque sua idade para saber se você pode votar!</h1>
+    <input type="number" name="idade" id="idade">
+    <input type="button" value="verificar" onclick="Verificar()">
+    <div id= "res">
+
+    </div>
+    <script>
+        function Verificar() {
+            var idade = window.document.querySelector('input#idade')
+            var res = window.document.querySelector('div#res')
+            var idade = Number(idade.value)
+            res.innerHTML = (`<p>Você tem ${idade} anos</p>`)
+            if (idade < 16) {
+                res.innerHTML += `<p> Você ainda <strong>não</strong> pode votar!</p>`
+            }
+            else if (idade < 18 || idade > 65) {
+                res.innerHTML += `<p> Você pode votar, mas é <strong>opcional!</strong></p>`
+            } else {
+                res.innerHTML += `<p> Você pode votar, é <strong>obrigatório!</strong></p>`
+            }
+        }
+    </script>
+    
+</body>
+</html>
